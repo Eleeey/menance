@@ -55,7 +55,7 @@ const handleSubmit = async(e:any) => {
           type="submit"
           className="mt-4 w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
         >
-          I have Made Payment Of {price?`$${price'}`: '$0.00'}
+          I have Made Payment Of {price ? `$${price}` : "$0.00"}
         </button>
       </Link>
 
