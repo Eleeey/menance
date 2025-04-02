@@ -37,8 +37,8 @@ const bal=await userBal(id)
         <div className="w-[70%] p-5 text-white bg-blue-400  rounded-lg space-around flex flex-row gap-3">
           {/* <img src="" alt="" width={20} height={20} /> */}
           <div className="mx-2 rounded flex gap-4 flex-col">
-            <h2>Welcome, <span className="cursor-pointer text-black capitalize underline">{user?.fullName}</span> </h2>
-            <p>Monance Member-Level 1</p>
+            <h2 className="text-[2rem]">Welcome, <span className="cursor-pointer text-black capitalize underline">{user?.fullName}</span> </h2>
+            {user?<p>Monance Member-Level 1</p>:null}
           </div>
         </div>
 
@@ -46,7 +46,7 @@ const bal=await userBal(id)
           <div className=" flex flex-col w-full h-[15rem] space-around ">
             <h2 className="m-6 text-[1.5rem] font-bold">Balance in USD</h2>
 
-            <p className="text-[5rem]">{`$${bal}.00`}</p>
+            <p className="text-[5rem]">{user ? `$${bal}.00` : "$0.00"}</p>
           </div>
         </div>
 
