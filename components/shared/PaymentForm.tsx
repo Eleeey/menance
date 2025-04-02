@@ -40,20 +40,22 @@ const handleSubmit = async(e:any) => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col  gap-10 w-[70vw] h-[10rem] mt-[1rem] p-4  rounded-lg ">
-      <label className="block font-bold mb-2 text-gray-700">Price:</label>
-      <input
-        type="number"
-        value={price}
-        onChange={(e) => setPrice(Number(e.target.value))}
-        className="w-full p-2 border rounded"
-        required
-      />
-      <WalletAddresses/>
+    <form onSubmit={handleSubmit} className="z-100 relative flex-col  gap-10 w-[70vw] h-[10rem] mt-[1rem] p-4  rounded-lg space-around ">
+
+    <label className="block font-bold mb-10 text-gray-700">How much Are you Depositing:</label>
+    <input
+      type="number"
+      value={price}
+      onChange={(e) => setPrice(Number(e.target.value))}
+      className="w-full p-2 border rounded "
+      required
+    />
+    <WalletAddresses/>
+
       <Link href="/">
         <button
           type="submit"
-          className="mt-4 w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
+          className="mt-4 w-[20rem] h-[3rem] bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
         >
           I have Made Payment Of {price ? `$${price}` : "$0.00"}
         </button>
