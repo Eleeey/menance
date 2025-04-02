@@ -26,7 +26,7 @@ const handleSubmit = async(e:any) => {
           clerkId:id,
           Balance:price
         }
-        // console.log(typeof price)
+        console.log(typeof price)
         // console.log(data)
         // await createUser(data)
         console.log("created")
@@ -45,7 +45,7 @@ const handleSubmit = async(e:any) => {
       <input
         type="number"
         value={price}
-        onChange={(e) => setPrice(Number(e.target.value))}
+        onChange={(e) => setPrice(e.target.value)}
         className="w-full p-2 border rounded"
         required
       />
