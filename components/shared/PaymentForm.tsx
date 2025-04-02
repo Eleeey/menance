@@ -15,7 +15,7 @@ import { createUser, getUserBal, getId } from "@/actions/payments";
 const PaymentForm = () => {
 
 const [price, setPrice] = useState();
-const handleSubmit = async(e) => {
+const handleSubmit = async(e:any) => {
 
       e.preventDefault();
       try{
@@ -26,7 +26,7 @@ const handleSubmit = async(e) => {
           clerkId:id,
           Balance:price
         }
-        console.log(typeof price)
+        // console.log(typeof price)
         // console.log(data)
         // await createUser(data)
         console.log("created")
