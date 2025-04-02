@@ -9,7 +9,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import WalletAddresses from "@/components/shared/Wallets"
 // import { currentUser } from "@clerk/nextjs/";
-import { createUser, getUserBal, updateBal, getId } from "@/actions/payments";
+import { createUser, getUserBal, getId } from "@/actions/payments";
 
 
 const PaymentForm = () => {
