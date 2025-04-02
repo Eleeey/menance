@@ -10,9 +10,7 @@ import Link from "next/link";
 import WalletAddresses from "@/components/shared/Wallets"
 // import { currentUser } from "@clerk/nextjs/";
 import { createUser, getUserBal, updateBal, getId } from "@/actions/payments";
-type Props = {
-  handleSubmit: () => void;
-}
+
 
 const PaymentForm = () => {
 
@@ -37,7 +35,6 @@ const handleSubmit = async(e) => {
       }catch(error){
         console.error("Error fetching ID:", error)
       }
-e.value=0
   };
 
 
@@ -53,7 +50,7 @@ e.value=0
         required
       />
       <WalletAddresses/>
-      <Link href="/wallets">
+      <Link href="/">
         <button
           type="submit"
           className="mt-4 w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"

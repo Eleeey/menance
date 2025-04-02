@@ -19,7 +19,7 @@ export default async function  Home() {
  //      router.push('/sign-in'); // Redirect to sign-in page if no user is found
  //    }
  //
- const id=user.id
+ const id=user?.id
 const bal=await userBal(id)
  console.log(bal)
 
