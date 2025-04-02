@@ -14,7 +14,7 @@ import { createUser, getUserBal, getId } from "@/actions/payments";
 
 const PaymentForm = () => {
 
-const [price, setPrice] = useState();
+const [price, setPrice] = useState<number>();
 const handleSubmit = async(e:any) => {
 
       e.preventDefault();
@@ -45,7 +45,7 @@ const handleSubmit = async(e:any) => {
       <input
         type="number"
         value={price}
-        onChange={(e) => setPrice(e.target.value)}
+        onChange={(e) => setPrice(Number(e.target.value))}
         className="w-full p-2 border rounded"
         required
       />
