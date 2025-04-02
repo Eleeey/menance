@@ -90,35 +90,3 @@ return userBal
     console.log(error);
   }
 }
-
-
-export async function updateBal(clerkId: string, bal:any) {
-  try {
-    await connectToDatabase();
-
-    const updatedUser = await Payment.findOneAndUpdate({ clerkId:id }, bal, {
-      new: true,
-    });
-
-    if (!updatedUser) throw new Error("User update failed");
-    return JSON.parse(JSON.stringify(updatedUser));
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-
-export const onCreatePayment= async(ammount:number)=>{
-  try {
-    const id=await getId()
-     const data={
-       clerkId:id,
-       Balance:ammount
-     }
-    await createUser(data);
-    await getUserBal(id,ammount)
-  } catch (error) {
-    consloe.log(error)
-  }
-
-}
