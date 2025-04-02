@@ -6,11 +6,11 @@ const WithdrawalForm = () => {
   const [amount, setAmount] = useState('');
   const [isWithdrawalAvailable, setIsWithdrawalAvailable] = useState(false); // Set to false to show the non-interactive state
 
-  const handleAmountChange = (e) => {
+  const handleAmountChange = (e:any) => {
     setAmount(e.target.value);
   };
 
-  const handleRequestWithdrawal = (e) => {
+  const handleRequestWithdrawal = (e:any) => {
     e.preventDefault();
     // Logic for withdrawal drequest (e.g., API call)
     console.log('Withdrawal requested for amount:', amount);
