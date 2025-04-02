@@ -34,7 +34,7 @@ const bal=await userBal(id)
         <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center">
           <Image src="/user.svg" alt="User" width={40} height={40} />
         </div>
-        <h2 className="text-2xl font-semibold">Welcome, {user.firstName}</h2>
+        <h2 className="text-2xl font-semibold">Welcome, {user?.firstName}</h2>
         {user ? <p className="text-gray-400">Member - Level 1</p> : null}
       </div>
 
