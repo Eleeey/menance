@@ -1,8 +1,8 @@
 
 import { getUserBal, userBal } from "@/actions/payments";
 import Nav from "@/components/shared/Header";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+
+
 import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
