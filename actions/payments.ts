@@ -25,7 +25,7 @@ export async function getId(){
 
     const user = await currentUser();
     // console.log(user)
-    return user.id
+    return user?.id
 }
 
 
