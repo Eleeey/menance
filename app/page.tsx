@@ -51,12 +51,12 @@ const bal=await userBal(id)
         </div>
 
         <div className="flex flex-row gap-3">
-          <Link href={"/Deposit"} className="flex flex-col space-around w-[7rem] h-[4rem] rounded bg-yellow-300">
+          <Link href={user?"/Deposit":""} className="flex flex-col space-around w-[7rem] h-[4rem] rounded bg-yellow-300">
             <Image src="/download.svg" alt="" width={24} height={24} />
             <p>Deposit</p>
           </Link>
 
-          <Link href="/Withrawal" className="flex flex-col space-around w-[7rem] h-[4rem] rounded bg-pink-400">
+          <Link href={user?"/Withrawal":""} className="flex flex-col space-around w-[7rem] h-[4rem] rounded bg-pink-400">
             <Image src="/withraw.svg" alt="" width={24} height={24} />
             <p>Withraw</p>
           </Link>

@@ -82,8 +82,8 @@ export async function userBal(id:any,) {
 
     const user = await Payment.findOne({clerkId:id});
     console.log(user)
-    const userBal = user.Balance;
-    console.log(typeof userBal)
+    const userBal = await user.Balance;
+    // console.log(typeof userBal)
 
 return userBal
   } catch (error) {
