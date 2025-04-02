@@ -9,7 +9,7 @@ const WalletAddresses = () => {
     '0xa0dd78bab8b4345053f6b52951d9abcb01f61e08 USDT BSC (BEP20)', // Wallet 4
   ]);
 
-  const copyToClipboard = (address) => {
+  const copyToClipboard = (address:any) => {
     navigator.clipboard.writeText(address)
       .then(() => {
         // alert('Address copied to clipboard!');
