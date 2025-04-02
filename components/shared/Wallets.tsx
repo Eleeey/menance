@@ -20,7 +20,7 @@ const WalletAddresses = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6  shadow-lg ">
+    <div className=" mx-auto p-6  shadow-lg ">
       <h2 className="text-center text-lg font-semibold mb-4">Please choose your currency and make payment to any of the wallets</h2>
       {addresses.map((address, index) => (
         <div key={index} className="mb-4 text-center">

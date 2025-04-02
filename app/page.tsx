@@ -46,7 +46,7 @@ const bal=await userBal(id)
           <div className=" flex flex-col w-full h-[15rem] space-around ">
             <h2 className="m-6 text-[1.5rem] font-bold">Balance in USD</h2>
 
-            <p className="text-[5rem]">{user ? `$${bal}.00` : "$0.00"}</p>
+            <p className="text-[3.5rem]">{user ? `$${bal}.00` : "$0.00"}</p>
           </div>
         </div>
 
@@ -67,7 +67,7 @@ const bal=await userBal(id)
         <div className="flex w-[70%] flex-col mt-7 space-around gap-3">
           <h2 className="text-lg font-bold mb-2">Deposit History</h2>
           <div className=" flex w-full space-around h-[10rem] rounded-lg border">
-            <p className="text-gray-500">payment history will appear here, wait a moment.</p>
+            <p className="text-gray-500 p-5">payment history will appear here, wait a moment.</p>
           </div>
         </div>
       </div>
