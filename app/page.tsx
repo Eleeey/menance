@@ -67,7 +67,7 @@ const bal=await userBal(id)
         <div className="flex w-[70%] flex-col mt-7 space-around gap-3">
           <h2 className="text-lg font-bold mb-2">Deposit History</h2>
           <div className=" flex w-full space-around h-[10rem] rounded-lg border">
-            <p className="text-gray-500">Sorry, reciepts are unavailableat the moment.</p>
+            <p className="text-gray-500">payment history will appear here, wait a moment.</p>
           </div>
         </div>
       </div>
