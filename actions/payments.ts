@@ -87,7 +87,7 @@ export async function userBal() {
         Balance:0
       }
       await createUser(data)
-      console.log(created)
+      console.log("created")
     }
     const newUser = await Payment.findOne({clerkId:id});
     console.log(newUser)
