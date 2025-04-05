@@ -4,7 +4,7 @@ import Payment from "@/lib/models/user.model";
 import { currentUser } from "@clerk/nextjs/server";
 
 type CreateUserParams = {
-  clerkId: string;
+  clerkId: any;
   Balance: number;
 }
 
