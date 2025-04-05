@@ -74,7 +74,7 @@ export async function getUserBal(id:any,ammount:any) {
     console.log(error);
   }
 }
-export async function userBal(id:any,) {
+export async function userBal() {
   try {
      await connectToDatabase()
      console.log("Connected to DB");
