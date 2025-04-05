@@ -57,7 +57,7 @@ const bal=await userBal()
           </button>
         </Link>
 
-        <Link href={user ? "/Withdrawal" : "#"}>
+        <Link href={user ? "/Withrawal" : "#"}>
           <button className="w-[10rem] space-around flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow-lg">
             <Image src="/withraw.svg" alt="Withdraw" width={20} height={20} />
             Withdraw
