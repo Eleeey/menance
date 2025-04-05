@@ -86,7 +86,7 @@ export async function userBal() {
         clerkId:id,
         price:0
       }
-      await createUser(d)
+      await createUser(data)
     }
     console.log(user)
     const userBal = await user?.Balance;
