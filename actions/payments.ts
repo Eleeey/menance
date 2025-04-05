@@ -36,7 +36,7 @@ export async function createUser(user: CreateUserParams) {
     console.log(id)
     const existingUser=await Payment.findOne({clerkId:id})
 
-    if(!id){
+    if(!existingUser){
       const newUser = await Payment.create(user);
       console.log(newUser)
       return JSON.parse(JSON.stringify(newUser));
@@ -87,7 +87,9 @@ export async function userBal() {
         Balance:0
       }
       await createUser(data)
+      console.log(created)
     }
+    const user = await Payment.findOne({clerkId:id});
     console.log(user)
     const userBal = await user?.Balance;
     // console.log(typeof userBal)
