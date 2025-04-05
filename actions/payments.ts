@@ -84,7 +84,7 @@ export async function userBal() {
     if(!user){
       const data={
         clerkId:id,
-        price:0
+        Balance:0
       }
       await createUser(data)
     }
