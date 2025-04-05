@@ -48,12 +48,12 @@ console.log(error);
 }
 
 
-export async function getUserBal(id:any,ammount:any) {
+export async function getUserBal(ammount:any) {
   try {
      await connectToDatabase()
      console.log("Connected to DB");
-     // const id=await getId()
-     // console.log(id)
+     const id=await getId()
+     console.log(id)
     const user = await Payment.findOne({clerkId:id});
     console.log(user)
     const userBal = user.Balance;
