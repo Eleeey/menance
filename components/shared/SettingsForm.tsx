@@ -55,7 +55,7 @@ const SettingsForm = async() => {
           <label className="block mb-1 text-sm">Email Address</label>
           <input
             type="email"
-            defaultValue={user?.Email}
+            defaultValue={""}
             disabled
             className="w-full px-3 py-2 rounded-md bg-[#0F2B36] border border-gray-500 text-gray-400 cursor-not-allowed"
           />
