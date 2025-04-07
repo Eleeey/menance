@@ -1,11 +1,21 @@
 
 import { getUserBal, userBal } from "@/actions/payments";
-import Nav from "@/components/shared/Header";
 
 
 import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
+import { ChartSpline, Superscript,  Settings, Volume2 } from 'lucide-react';
+
+const navItems = [
+  { icon: <ChartSpline className="w-8 h-8 text-cyan-400" />,href:"/investment", label: 'Investment Plans' },
+  { icon: <Superscript className="w-8 h-8 text-cyan-400" />,href:"/ranks", label: 'Badges' },
+  { icon: <Volume2 className="w-8 h-8 text-cyan-400" />,href:"/referral", label: 'Refferals' },
+  { icon: <Settings className="w-8 h-8 text-cyan-400" />,href:"/settings", label: 'Settings' },
+
+];
+
+
 // import { useRouter } from 'next/router';
 
 
@@ -25,6 +35,8 @@ const bal=await userBal()
 
   return (
     <>
+
+
     <div className="hidden xl:flex space-around h-[100vh]">
     <p className="text-gray-500">Sorry, Application not available for this device, please switch to a mobile device</p>
     </div>
@@ -51,18 +63,43 @@ const bal=await userBal()
       {/* Action Buttons */}
       <div className="flex gap-4 mt-6">
         <Link href={user ? "/Deposit" : "#"}>
-          <button className="w-[10rem] space-around flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg">
+          <button className="w-[8.5rem] space-around flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg">
             <Image src="/download.svg" alt="Deposit" width={20} height={20} />
             Deposit
           </button>
         </Link>
+        <Link href={user ? "/investment" : "#"}>
+          <button className="w-[8.5rem] space-around flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg">
+            <Image src={'/box.svg'} alt="Deposit" width={20} height={20} />
+            Investments
+          </button>
+        </Link>
 
         <Link href={user ? "/Withrawal" : "#"}>
-          <button className="w-[10rem] space-around flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow-lg">
+          <button className="w-[8.5rem] space-around flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow-lg">
             <Image src="/withraw.svg" alt="Withdraw" width={20} height={20} />
             Withdraw
           </button>
         </Link>
+      </div>
+
+      {/*nav items*/}
+
+      <div className="bg-[#1d3557] p-6 rounded-xl w-[75%] max-w-2xl mx-auto text-white">
+        <h2 className="text-lg font-semibold mb-4 border-b border-gray-500 pb-2">
+          ALL NAVIGATIONS
+        </h2>
+        <div className="grid grid-cols-3 gap-y-8 gap-x-4 text-center">
+          {navItems.map((item, index) => (
+            <Link href={item.href} key={index} className="relative flex flex-col items-center justify-center space-y-2">
+              <div className="relative">
+                {item.icon}
+                <span className="absolute -top-2 -right-2 w-3.5 h-3.5 rounded-full bg-yellow-400 border border-[#1d3557]" />
+              </div>
+              <span className="text-sm font-medium text-gray-200">{item.label}</span>
+            </Link>
+          ))}
+        </div>
       </div>
 
       {/* Deposit History */}

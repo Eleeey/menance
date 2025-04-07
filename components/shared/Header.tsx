@@ -4,6 +4,7 @@ import Image from "next/image";
 import { SignedOut, SignedIn, UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import { Button } from "../ui/button";
+import { Settings} from 'lucide-react';
 
 import {  } from "@clerk/nextjs";
 
@@ -29,14 +30,14 @@ const Nav = async() => {
           <UserButton afterSignOutUrl="/" />
         </SignedIn> */}
 
-        <SignedIn>
-          <nav className="md:flex-between hidden w-full max-w-xs">
-            {/* <NavItems /> */}
-          </nav>
-        </SignedIn>
+
 
         <div className="flex w-32 justify-end gap-3">
+
           <SignedIn>
+        <Link className="ml-10" href='/settings'>
+          <Settings/>
+        </Link>
             <UserButton afterSignOutUrl="/" />
             {/* <MobileNav /> */}
           </SignedIn>

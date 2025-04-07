@@ -14,7 +14,7 @@ import { createUser, getUserBal, getId } from "@/actions/payments";
 
 const PaymentForm = () => {
 
-const [price, setPrice] = useState<number>();
+const [price, setPrice] = useState<number>(0);
 const handleSubmit = async(e:any) => {
 
       e.preventDefault();
@@ -40,7 +40,8 @@ const handleSubmit = async(e:any) => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="z-100 relative flex-col  gap-10 w-[70vw] h-[10rem] mt-[1rem] p-4  rounded-lg space-around ">
+
+    <form onSubmit={handleSubmit} className=" z-100 relative flex-col  gap-10 w-[70vw] h-[10rem] mt-[1rem] p-4  rounded-lg space-around ">
 
     <label className="block font-bold mb-10 text-gray-700">How much Are you Depositing:</label>
     <input

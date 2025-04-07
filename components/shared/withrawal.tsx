@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const WithdrawalForm = () => {
-  const [withdrawableBalance, setWithdrawableBalance] = useState(500); // Example balance
+  const [withdrawableBalance, setWithdrawableBalance] = useState(0); // Example balance
   const [amount, setAmount] = useState('');
   const [isWithdrawalAvailable, setIsWithdrawalAvailable] = useState(false); // Set to false to show the non-interactive state
 
@@ -20,8 +20,8 @@ const WithdrawalForm = () => {
     <div className={`relative ${isWithdrawalAvailable ? '' : 'opacity-50 pointer-events-none'}`}>
       {/* Non-Interactive Overlay */}
       {!isWithdrawalAvailable && (
-        <div className="absolute inset-0 bg-gray-500 opacity-50 flex items-center justify-center z-10">
-          <h2 className="text-white text-3xl font-semibold">Withdrawals are currently unavailable</h2>
+        <div className="absolute inset-0  bg-gray-500 opacity-50 flex items-center justify-center z-10">
+          <h2 className="text-white p-[3rem] text-center text-3xl font-semibold">Withdrawals are currently unavailable plese check back later</h2>
         </div>
       )}
 
