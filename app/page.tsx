@@ -61,22 +61,17 @@ const bal=await userBal()
       </div>
 
       {/* Action Buttons */}
-      <div className="flex w-[70%] gap-4 mt-6">
+      <div className="flex  gap-4 mt-6">
         <Link href={user ? "/Deposit" : "#"}>
-          <button className="w-full space-around flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg">
+          <button className="w-[8.5rem] space-around flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg">
             <Image src="/download.svg" alt="Deposit" width={20} height={20} />
             Deposit
           </button>
         </Link>
-        <Link href={user ? "/investment" : "#"}>
-          <button className="w-full space-around flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg">
-            <Image src={'/box.svg'} alt="Deposit" width={20} height={20} />
-            Investments
-          </button>
-        </Link>
+        
 
         <Link href={user ? "/Withrawal" : "#"}>
-          <button className="w-full space-around flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow-lg">
+          <button className="w-[8.5rem] space-around flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow-lg">
             <Image src="/withraw.svg" alt="Withdraw" width={20} height={20} />
             Withdraw
           </button>
