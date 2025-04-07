@@ -56,7 +56,10 @@ const InvestmentCard = () => {
   return (
     <div className="bg-[#0F2B36] min-h-screen flex flex-col space-around gap-10 justify-center p-4">
   {plans.map((plan) => (
-    <div key={plan.id} className="bg-[#102D3E] text-white rounded-xl shadow-xl p-6 w-full max-w-md border border-pink-500 relative">
+    <div
+      key={plan.id}
+      className="bg-[#102D3E] text-white rounded-xl shadow-xl p-6 w-full max-w-md border border-pink-500 relative"
+    >
       {/* Badge */}
       <div className="absolute top-4 right-4 bg-gradient-to-br from-pink-500 to-purple-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
         {plan.badge}
@@ -83,23 +86,23 @@ const InvestmentCard = () => {
         </div>
         <div className="flex justify-between">
           <span>Capital Back</span>
-          <span>{plan.capitalBack}</span>
+          <span>Yes</span>
         </div>
         <div className="flex justify-between">
           <span>Return Type</span>
-          <span>{plan.returnType}</span>
+          <span>Period</span>
         </div>
         <div className="flex justify-between">
           <span>Number of Period</span>
-          <span>{plan.numberOfPeriod}</span>
+          <span>1 Time</span>
         </div>
         <div className="flex justify-between">
           <span>Profit Withdraw</span>
-          <span>{plan.profitWithdraw}</span>
+          <span>Anytime</span>
         </div>
         <div className="flex justify-between">
           <span>Cancel</span>
-          <span>{plan.cancel}</span>
+          <span>No</span>
         </div>
       </div>
 
@@ -115,6 +118,7 @@ const InvestmentCard = () => {
     </div>
   ))}
 </div>
+
   );
 };
 
