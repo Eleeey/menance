@@ -7,7 +7,7 @@ const SettingsForm = async() => {
   const user= await currentUser()
   return (
     <div className="bg-[#0F2B36] min-h-screen flex flex-col items-center justify-center p-4">
-      <form disabled className="bg-[#102D3E] text-white rounded-xl shadow-lg p-6 w-full max-w-md space-y-4">
+      <form  className="bg-[#102D3E] text-white rounded-xl shadow-lg p-6 w-full max-w-md space-y-4">
         {/* First Name */}
         <div>
           <label className="block mb-1 text-sm">First Name</label>
