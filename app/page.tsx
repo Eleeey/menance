@@ -62,7 +62,7 @@ const bal=await userBal()
 
       {/* Action Buttons */}
       <div className="flex  gap-4 mt-6">
-        <Link href={user ? "/Deposit" : "#"}>
+        <Link href={user ? "/Deposit" : "/sign-in"}>
           <button className="w-[8.5rem] space-around flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg">
             <Image src="/download.svg" alt="Deposit" width={20} height={20} />
             Deposit
@@ -70,7 +70,7 @@ const bal=await userBal()
         </Link>
 
 
-        <Link href={user ? "/Withrawal" : "#"}>
+        <Link href={user ? "/Withrawal" : "/sign-in"}>
           <button className="w-[8.5rem] space-around flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow-lg">
             <Image src="/withraw.svg" alt="Withdraw" width={20} height={20} />
             Withdraw
@@ -86,7 +86,7 @@ const bal=await userBal()
         </h2>
         <div className="grid grid-cols-3 gap-y-8 gap-x-4 text-center">
           {navItems.map((item, index) => (
-            <Link href={user ? item.href : '#'} key={index} className="relative flex flex-col items-center justify-center space-y-2">
+            <Link href={user ? item.href : '/sign-in'} key={index} className="relative flex flex-col items-center justify-center space-y-2">
               <div className="relative">
                 {item.icon}
                 <span className="absolute -top-2 -right-2 w-3.5 h-3.5 rounded-full bg-yellow-400 border border-[#1d3557]" />
