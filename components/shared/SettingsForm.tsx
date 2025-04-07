@@ -13,7 +13,7 @@ const SettingsForm = async() => {
           <label className="block mb-1 text-sm">First Name</label>
           <input
             type="text"
-            defaultValue={user?.firstName}
+            defaultValue={user?.firstName ?? ""}
             className="w-full px-3 py-2 rounded-md bg-[#0F2B36] border border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
@@ -23,7 +23,7 @@ const SettingsForm = async() => {
           <label className="block mb-1 text-sm">Last Name</label>
           <input
             type="text"
-            defaultValue={user?.lastName}
+            defaultValue={user?.lastName ?? ""}
             className="w-full px-3 py-2 rounded-md bg-[#0F2B36] border border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
@@ -33,7 +33,7 @@ const SettingsForm = async() => {
           <label className="block mb-1 text-sm">User Name</label>
           <input
             type="text"
-            defaultValue={`${user?.firstName}${user?.lastName}`}
+            defaultValue={`${user?.firstName?? ""}${user?.lastName ?? ""}`}
             className="w-full px-3 py-2 rounded-md bg-[#0F2B36] border border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
