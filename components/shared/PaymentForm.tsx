@@ -53,14 +53,7 @@ const handleSubmit = async(e:any) => {
     />
     <WalletAddresses/>
 
-      <Link href="/">
-        <button
-          type="submit"
-          className="mt-4 w-[20rem] h-[3rem] bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
-        >
-          I have Made Payment Of {price ? `$${price}` : "$0.00"}
-        </button>
-      </Link>
+
 
     </form>
   );
